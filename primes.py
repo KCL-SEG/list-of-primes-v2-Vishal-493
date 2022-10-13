@@ -4,7 +4,10 @@
 def primes(number_of_primes):
     list = []
     newlist = []
-    try:
+    if number_of_primes < 1:
+        raise Exception("Input a positive integer")
+    if number_of_primes.is_integer() == False:
+        raise Exception("Input a number")
         while 1:
             for i in range(2, 100):
                 for j in range(2, i):
@@ -22,6 +25,5 @@ def primes(number_of_primes):
                     continue
             break
         return newlist
-    except ValueError:
-        print("Input a positive number of primes")
+
         
