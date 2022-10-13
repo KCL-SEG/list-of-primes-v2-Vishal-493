@@ -6,7 +6,7 @@ def primes(number_of_primes):
     newlist = []
     if number_of_primes < 1:
         raise ValueError("Input a positive integer")
-    if number_of_primes.is_integer() == False:
+    if (number_of_primes).is_integer() == False:
         raise TypeError("Input a number")
         while 1:
             for i in range(2, 100):
